@@ -3,8 +3,20 @@ package main;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Scanner;
 
 public class MathUtils {
+
+	public static void main(String[] args) {
+		CommandHandler commHandler = new CommandHandler();
+		Scanner myScanner = new Scanner(System.in); // Create a Scanner object
+		System.out.println("Please enter a list of numbers seperated by comma (,)");
+
+		String myNumbers = myScanner.nextLine(); // Read user input
+		commHandler.processCommand(myNumbers);
+		myScanner.close();
+
+	}
 
 	public int findMax(final List<Integer> numbers) {
 		return Collections.max(numbers);
