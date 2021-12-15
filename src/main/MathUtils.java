@@ -1,5 +1,6 @@
 package main;
 
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -36,7 +37,7 @@ public class MathUtils {
 			List<Integer> sortedNumbers = this.sortAsc(numbers);
 			int firstMiddleNum = (sortedNumbers.size() / 2) - 1;
 			int secondMiddleNum = sortedNumbers.size() / 2;
-			List<Integer> middleNums = new ArrayList<Integer>();
+			List<Integer> middleNums = new ArrayList<>();
 			middleNums.add(sortedNumbers.get(firstMiddleNum));
 			middleNums.add(sortedNumbers.get(secondMiddleNum));
 			median = this.findMean(middleNums);
@@ -48,13 +49,13 @@ public class MathUtils {
 	}
 
 	public List<Integer> sortAsc(final List<Integer> numbers) {
-		List<Integer> sortAsc = new ArrayList<Integer>(numbers);
+		List<Integer> sortAsc = new ArrayList<>(numbers);
 		Collections.sort(sortAsc);
 		return sortAsc;
 	}
 
 	public List<Integer> sortDesc(final List<Integer> numbers) {
-		List<Integer> sortDesc = new ArrayList<Integer>(numbers);
+		List<Integer> sortDesc = new ArrayList<>(numbers);
 		Collections.sort(sortDesc, Collections.reverseOrder());
 		return sortDesc;
 
